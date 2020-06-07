@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { RectButton } from 'react-native-gesture-handler';
-import { AsyncStorage, View, ScrollView } from 'react-native';
+import { ScrollView } from 'react-native';
 
 import api from '../../services/api';
 
@@ -20,21 +20,6 @@ const ChatList = () => {
     const response = await api.get(`/users/${username}/following`);
 
     setUsers(response.data);
-  }
-
-  const getUsers = async () => {
-    try {
-      const users = await AsyncStorage.getItem('users');
-
-      if(users === null) {
-        return;
-      }
-
-    console.log(users);
-    }
-    catch (error) {
-      console.log(error)
-    }
   }
 
   return (

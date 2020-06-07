@@ -6,6 +6,8 @@ import { createStackNavigator } from '@react-navigation/stack';
 import Menu, { MenuItem, MenuDivider } from 'react-native-material-menu';
 
 import Chat from '../pages/Chat';
+import Picture from '../pages/Picture';
+
 import TabNavigation from './TabNavigation';
 
 const AppStack = createStackNavigator();
@@ -62,6 +64,7 @@ class MainNavigation extends React.PureComponent {
             }}
           />
           <AppStack.Screen name="Chat" component={ Chat } />
+          <AppStack.Screen name="Picture" component={ Picture }/>
         </AppStack.Navigator>
       </NavigationContainer>
     );
