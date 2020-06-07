@@ -13,6 +13,7 @@ const AppTab = createMaterialTopTabNavigator();
 const TabNavigation = () => {
   return (
     <AppTab.Navigator
+      initialRouteName="ChatList"
       tabBarOptions={{
         tabStyle: {
           width: 'auto',
